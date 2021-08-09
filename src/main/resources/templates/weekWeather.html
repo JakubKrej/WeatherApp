@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Current Weather</title>
+    <link href="css/weekstyle.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+<div>
+
+
+    <form action="/current-weather" method="GET">
+        <tr>
+            <td><input th:value="${currentWeather.cityName}" name="city" ></td>
+            <input  type="submit" value="Current Day"  >
+        </tr>
+
+    </form>
+
+
+    <div class="block">
+        <div>
+            <h3>City Name</h3>
+            <p th:text="${futureWeather.city}">City name</p>
+        </div>
+        <div>
+            <h3>1</h3>
+            <p th:text="${futureWeather.curentDayTemp}">1</p>
+        </div>
+        <div>
+            <h3>2</h3>
+            <p th:text="${futureWeather.secendDayTemp}">2</p>
+        </div>
+        <div>
+            <h3>3</h3>
+            <p th:text="${futureWeather.thirdDayTemp}">3</p>
+        </div>
+        <div>
+            <h3>4</h3>
+            <p th:text="${futureWeather.fourthDayTemp}">4</p>
+        </div>
+        <div>
+            <h3>5</h3>
+            <p th:text="${futureWeather.fifthDayTemp}">5</p>
+        </div>
+        <div>
+            <h3>6</h3>
+            <p th:text="${futureWeather.sixthDayTemp}">6</p>
+        </div>
+        <div>
+            <h3>7</h3>
+            <p th:text="${futureWeather.seventhDayTemp}">7</p>
+        </div>
+        <div>
+            <h3>8</h3>
+            <p th:text="${futureWeather.eighthDayTemp}">8</p>
+        </div>
+
+    </div>
+
+</div>
+
+<!--    </div>-->
+<!--    <h3>Current Weather</h3>-->
+
+<!--    <h3>City Name</h3>-->
+<!--    <p th:text="${currentWeather.cityName}">City name</p>-->
+<!--    <h3>Current Conditions</h3>-->
+<!--    <p th:text="${currentWeather.description}">Description</p>-->
+<!--    <h3>Temperature</h3>-->
+<!--    <p th:text="${currentWeather.temperature} + ' &#8451;'">Temperature</p>-->
+<!--    <h3>Zachmurzenie</h3>-->
+<!--    <p th:text="${currentWeather.cloudPer} + ' %'">Zachmurzenie</p>-->
+
+<!--    <img src="/img/clouds.png" alt="Girl in a jacket" >-->
+<!--</div>-->
+
+<!--<div class="timeofday">-->
+
+
+<!--    <div class="1">-->
+
+<!--        <h3>Morning              .</h3>-->
+<!--        <p th:text="${dayWeather.morningTemp} + ' &#8451;'">Morning temp           .</p>-->
+
+<!--    </div>-->
+
+<!--    <div class="2">-->
+
+<!--        <h3>Midday          .</h3>-->
+<!--        <p th:text="${dayWeather.middayTemp} + ' &#8451;'">midday temp            .</p>-->
+<!--    </div>-->
+
+<!--    <div class="3">-->
+
+<!--        <h3>Evening</h3>-->
+<!--        <p th:text="${dayWeather.eveningTemp} + ' &#8451;'">Evening temp           .</p>-->
+
+<!--    </div>-->
+
+
+
+<!--</div>-->
+
+</body>
+</html>

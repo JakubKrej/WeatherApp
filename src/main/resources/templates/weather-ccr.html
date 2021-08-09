@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Current Weather</title>
+    <link href="css/ccrstyle.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+<div>
+
+    <form action="/week-weather" method="GET">
+        <tr>
+            <td><input th:value="${currentWeather.cityName}" name="city" ></td>
+            <input  type="submit" value="Back to week weather"  >
+        </tr>
+
+    </form>
+
+
+
+    <h3>Current Weather</h3>
+
+    <h3>City Name</h3>
+    <p th:text="${currentWeather.cityName}">City name</p>
+    <h3>Current Conditions</h3>
+    <p th:text="${currentWeather.description}">Description</p>
+    <h3>Temperature</h3>
+    <p th:text="${currentWeather.temperature} + ' &#8451;'">Temperature</p>
+    <h3>Zachmurzenie</h3>
+    <p th:text="${currentWeather.cloudPer} + ' %'">Zachmurzenie</p>
+
+    <img src="/img/clouds.png" alt="Girl in a jacket" >
+</div>
+
+<div class="timeofday">
+
+
+    <div class="1">
+
+        <h3>Morning              .</h3>
+        <p th:text="${dayWeather.morningTemp} + ' &#8451;'">Morning temp           .</p>
+
+    </div>
+
+    <div class="2">
+
+        <h3>Midday          .</h3>
+        <p th:text="${dayWeather.middayTemp} + ' &#8451;'">midday temp            .</p>
+    </div>
+
+    <div class="3">
+
+        <h3>Evening</h3>
+        <p th:text="${dayWeather.eveningTemp} + ' &#8451;'">Evening temp           .</p>
+
+    </div>
+
+
+
+</div>
+
+</body>
+</html>

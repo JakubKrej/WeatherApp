@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Current Weather</title>
+</head>
+<body>
+
+
+<div>
+
+
+
+
+    <div  method="post" >
+        <form action="/week-weather" method="GET">
+            <tr>
+                <td><input type="text" name="city" > </td>
+                <input type="submit"   value="search" />
+            </tr>
+
+        </form>
+
+        <input id="as" value="piotraek">
+
+        <img id="obrazek" src="/icons/sun.png" alt="Girl in a jacket" width="500" height="600">
+        <script type="text/javascript" charset="utf-8">
+
+            var img = document.getElementById('obrazek');
+
+            if(document.getElementById("as").value == "piotrek"){
+               document.getElementById("obrazek").src="/img/clouds.png";
+           }else{
+
+                document.getElementById("obrazek").src="/img/wind.png";
+
+           }
+        </script>
+
+
+    </div>
+
+</div>
+</body>
+</html>
