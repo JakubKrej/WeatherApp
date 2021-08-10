@@ -1,41 +1,57 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en" >
 <head>
     <meta charset="UTF-8">
     <title>Current Weather</title>
+    <link href="css/citysearch.css" rel="stylesheet" type="text/css">
 </head>
 <body>
 
 
-<div>
+<div class="bg">
 
 
 
 
-    <div  method="post" >
-        <form action="/week-weather" method="GET">
-            <tr>
-                <td><input type="text" name="city" > </td>
-                <input type="submit"   value="search" />
-            </tr>
+    <div  class="bgsque" method="post" >
 
-        </form>
 
-        <input id="as" value="piotraek">
+        <div>
+            <p>Sprawdz pogodę w swoim mieście!</p>
 
-        <img id="obrazek" src="/icons/sun.png" alt="Girl in a jacket" width="500" height="600">
-        <script type="text/javascript" charset="utf-8">
+        </div>
 
-            var img = document.getElementById('obrazek');
+        <div class="inppp">
 
-            if(document.getElementById("as").value == "piotrek"){
-               document.getElementById("obrazek").src="/img/clouds.png";
-           }else{
+            <form action="/week-weather" method="GET">
 
-                document.getElementById("obrazek").src="/img/wind.png";
+                <input class="inpser" type="text" name="city"  id="city">
+                <input class="sebutt" type="submit"   value="Sprawdź" />
 
-           }
-        </script>
+
+            </form>
+
+        </div>
+
+
+
+        <!--        <input id="as" value="piotraek">-->
+
+        <!--
+                <img id="obrazek" src="/icons/sun.png" alt="Girl in a jacket" width="500" height="600">
+                <script type="text/javascript" charset="utf-8">
+
+                    var img = document.getElementById('obrazek');
+
+                    if(document.getElementById("as").value == "piotrek"){
+                       document.getElementById("obrazek").src="/icons/storm.png";
+                   }else{
+
+                        document.getElementById("obrazek").src="/icons/sun.png";
+
+                   }
+                </script>
+        -->
 
 
     </div>
