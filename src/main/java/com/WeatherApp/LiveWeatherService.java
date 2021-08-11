@@ -65,7 +65,7 @@ public class LiveWeatherService {
     }
 
 
-    private String ConvertTime(int time){
+    public String ConvertTime(){
 
         Date timee = new Date();
         String day;

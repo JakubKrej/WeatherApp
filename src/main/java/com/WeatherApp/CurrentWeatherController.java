@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.math.BigDecimal;
+import java.util.Date;
 
 
 @Controller
@@ -25,6 +26,10 @@ public class CurrentWeatherController {
     @RequestMapping("/")
     public String home()
     {
+
+        long unixTime = System.currentTimeMillis() / 1000L;
+        System.out.println(unixTime);
+
         return "citySearch";
     }
 
@@ -34,9 +39,14 @@ public class CurrentWeatherController {
         String cityName = city.getCity();
 
         System.out.println( "controller 1 " + cityName);
+        System.out.println(liveWeatherService.ConvertTime());
+        Date timee = new Date();
+        String day;
+        System.out.println(timee.getDay());
 
         model.addAttribute("currentWeather", liveWeatherService.getCurrentWeatherByCity(cityName));
         model.addAttribute("futureWeather", futureWeatherService.getFutureWeatherByCity(cityName));
+        model.addAttribute("dayofweek", liveWeatherService.ConvertTime());
 
 
 

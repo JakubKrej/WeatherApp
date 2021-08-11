@@ -64,15 +64,24 @@ public class FutureWeatherService {
         try {
             JsonNode root = objectMapper.readTree(response.getBody());
 
+            System.out.println(ConvertTime(0) + ConvertTime(2));
             return  new FutureWeather(name,
                     BigDecimal.valueOf(root.path("daily").get(0).path("temp").path("day").asDouble()),
+                    ConvertTime(root.path("daily").get(0).path("dt").asInt()),
                     BigDecimal.valueOf(root.path("daily").get(1).path("temp").path("day").asDouble()),
+                    ConvertTime(root.path("daily").get(1).path("dt").asInt()),
                     BigDecimal.valueOf(root.path("daily").get(2).path("temp").path("day").asDouble()),
+                    ConvertTime(root.path("daily").get(2).path("dt").asInt()),
                     BigDecimal.valueOf(root.path("daily").get(3).path("temp").path("day").asDouble()),
+                    ConvertTime(root.path("daily").get(3).path("dt").asInt()),
                     BigDecimal.valueOf(root.path("daily").get(4).path("temp").path("day").asDouble()),
+                    ConvertTime(root.path("daily").get(4).path("dt").asInt()),
                     BigDecimal.valueOf(root.path("daily").get(5).path("temp").path("day").asDouble()),
+                    ConvertTime(root.path("daily").get(5).path("dt").asInt()),
                     BigDecimal.valueOf(root.path("daily").get(6).path("temp").path("day").asDouble()),
-                    BigDecimal.valueOf(root.path("daily").get(7).path("temp").path("day").asDouble())
+                    ConvertTime(root.path("daily").get(6).path("dt").asInt()),
+                    BigDecimal.valueOf(root.path("daily").get(7).path("temp").path("day").asDouble()),
+                    ConvertTime(root.path("daily").get(7).path("dt").asInt())
                     );
 
         } catch (JsonProcessingException e) {
@@ -82,11 +91,14 @@ public class FutureWeatherService {
     }
 
 
-    private String ConvertTime(int time){
+    private String ConvertTime(int val){
 
-        Date timee = new Date();
+
+        Date date = new Date(val*1000L);
+
         String day;
-        switch(timee.getDay()){
+
+        switch(date.getDay()){
             case 1:
                 day = "Monday";
                 break;
@@ -109,7 +121,7 @@ public class FutureWeatherService {
                 day = "Sunday";
                 break;
             default:
-                throw new IllegalStateException("Unexpected value: " + timee.getDay());
+                throw new IllegalStateException("Unexpected value: " + date.getDay());
         }
 
         return day;
