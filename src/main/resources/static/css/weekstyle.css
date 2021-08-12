@@ -6,15 +6,116 @@ body {
 
  .bg {
 
+      position: absolute;
+      width: 76vw;
+      height: 75vh;
+      background-color: #0E0F26;
+      opacity: 0.8;
+      left: 12vw;
+      top: 15vh;
+      border-radius: 25px;
+      color: white;
+
+  }
+
+ .city {
+
      position: absolute;
-     width: 60%;
-     height: 50vh;
-     background-color: #0E0F26;
-     opacity: 0.8;
-     left: 10%;
-     top: 10vh;
-     border-radius: 25px;
-     color: white;
+     width: 30vw;
+     height: 60px;
+     left: 35vw;
+     top: 13vh;
+     background-color: aqua;
+     text-align: center;
+     border-radius: 30px;
+     border: 0;
+     font-size: 30px;
+     font-weight: bold;
 
  }
 
+ .block{
+
+     position: relative;
+     margin-top: 6%;
+     width: 90%;
+     height: 80%;
+     left: 5%;
+
+ }
+
+ .block1 {
+
+     position: relative;
+     width: 270px;
+     height: 245px;
+     display: inline-block;
+     background-color: blueviolet;
+     margin-left: 2%;
+     margin-right: 2%;
+     margin-bottom: 4%;
+     border: 0;
+     border-radius: 30px;
+
+ }
+
+ .day {
+
+     position: absolute;
+     width: 100%;
+     background-color: white;
+     padding-top:  15px;
+     padding-bottom: 15px;
+     height: 25px;
+     border: 0;
+     bottom: 0px;
+     margin: 0px;
+     font-size: 20px;
+     border-radius: 25px;
+     text-align: center;
+     color: black;
+
+ }
+
+
+ .sec {
+
+     display: inline-flex;
+
+ }
+
+ .degrees {
+
+     position: absolute;
+     right: 18%;
+     color: white;
+     font-size: 80px;
+     margin: 0;
+     margin-top: 25%;
+     margin-left: 5%;
+
+ }
+
+ .celc {
+
+     position: absolute;
+     font-size: 30px;
+     right: 7%;
+     margin-left: 0px;
+     margin-top: 20%;
+ }
+
+ .imag {
+
+     position: absolute;
+     left: 7%;
+     margin-top: 13%;
+     height: 120px;
+     width: 120px;
+ }
+
+ .descripweather {
+
+        visibility: hidden;
+
+ }

@@ -7,6 +7,9 @@
 </head>
 <body>
 
+
+
+
 <div class="bg">
 
 
@@ -19,7 +22,9 @@
     </form>
 
 
-<!--    Clouds, Clear, Mist, Snow, Rain, Drizzle, Thunderstorm-->
+
+
+    <!--    Clouds, Clear, Mist, Snow, Rain, Drizzle, Thunderstorm-->
 
     <!--        <input id="as" value="piotraek">-->
 
@@ -29,57 +34,142 @@
 
                 var img = document.getElementById('obrazek');
 
-                if(document.getElementById("as").value == "piotrek"){
-                   document.getElementById("obrazek").src="/icons/storm.png";
-               }else{
+                const tab = ["pic1", "pic2", "pic3", "pic4", "pic5", "pic6", "pic7", "pic8"];
+                const tab2 = ["dw1", "dw2", "dw3", "dw4", "dw5", "dw6", "dw7", "dw8"];
 
-                    document.getElementById("obrazek").src="/icons/sun.png";
+                for (let i=0; i<tab.length; i++) {
+                const el = tab[i];
+                const el2 = tab2[i];
 
-               }
+                if(document.getElementById(el2).value == "Storm"){
+                   document.getElementById(el).src="/img/storm.png";
+                }else if(document.getElementById(el2).value == "Drizzle"){
+                   document.getElementById(el).src="/img/drizzle.png";
+                }else if(document.getElementById(el2).value == "Mist"){
+                   document.getElementById(el).src="/img/mist.png";
+                }else if(document.getElementById(el2).value == "Rain"){
+                   document.getElementById(el).src="/img/rain.png";
+                }else if(document.getElementById(el2).value == "Snow"){
+                   document.getElementById(el).src="/img/snow.png";
+                }else if(document.getElementById(el2).value == "Storm"){
+                   document.getElementById(el).src="/img/storm.png";
+                }else if(document.getElementById(el2).value == "Sun"){
+                   document.getElementById(el).src="/img/sun.png";
+                }else if(document.getElementById(el2).value == "Wind"){
+                   document.getElementById(el).src="/img/wind.png";
+                }
+
+                }
+
+
             </script>
     -->
 
     <div class="block">
-        <div>
-            <h3>City Name</h3>
-            <p th:text="${futureWeather.city}">City name</p>
-            <input  type="submit" value="Current Day"  >
+        <div class="block1 sec">
+            <p class="day" th:text="${futureWeather.day1}">poniedziałek</p>
+            <p class="degrees" th:text="${futureWeather.curentDayTemp}">16</p>
+            <p class="celc">&#x2103;</p>
+            <img id="pic1" class="imag" src="img/sun.png">
+            <p id="dw1" class="descripweather" th:text="${futureWeather.description1}"> </p>
         </div>
-        <div>
-            <p th:text="${futureWeather.day1}">1</p>
-            <p th:text="${futureWeather.curentDayTemp}">1</p>
+        <div class="block1 sec">
+            <p class="day" th:text="${futureWeather.day2}">poniedziałek</p>
+            <p class="degrees" th:text="${futureWeather.secendDayTemp}">22</p>
+            <p class="celc">&#x2103;</p>
+            <img id="pic2" class="imag" src="img/sun.png">
+            <p id="dw2" class="descripweather" th:text="${futureWeather.description2}" > </p>
         </div>
-        <div>
-            <p th:text="${futureWeather.day2}">2</p>
-            <p th:text="${futureWeather.secendDayTemp}">2</p>
+        <div class="block1 sec">
+            <p  class="day" th:text="${futureWeather.day3}">poniedziałek3</p>
+            <p  class="degrees" th:text="${futureWeather.thirdDayTemp}">33</p>
+            <p class="celc">&#x2103;</p>
+            <img id="pic3" class="imag" src="img/sun.png">
+            <p  id="dw3" class="descripweather" th:text="${futureWeather.description3}" > </p>
         </div>
-        <div>
-            <p th:text="${futureWeather.day3}">3</p>
-            <p th:text="${futureWeather.thirdDayTemp}">3</p>
+        <div class="block1 sec">
+            <p class="day" th:text="${futureWeather.day4}">4poniedziałek</p>
+            <p class="degrees" th:text="${futureWeather.fourthDayTemp}">4</p>
+            <p class="celc">&#x2103;</p>
+            <img id="pic4" class="imag" src="img/sun.png">
+            <p id="dw4" class="descripweather" th:text="${futureWeather.description4}" > </p>
         </div>
-        <div>
-            <p th:text="${futureWeather.day4}">4</p>
-            <p th:text="${futureWeather.fourthDayTemp}">4</p>
+        <div class="block1 sec">
+            <p class="day" th:text="${futureWeather.day5}">poniedziałek</p>
+            <p class="degrees" th:text="${futureWeather.fifthDayTemp}">5</p>
+            <p class="celc">&#x2103;</p>
+            <img id="pic5" class="imag" src="img/sun.png">
+            <p id="dw5" class="descripweather" th:text="${futureWeather.description5}" > </p>
         </div>
-        <div>
-            <p th:text="${futureWeather.day5}">5</p>
-            <p th:text="${futureWeather.fifthDayTemp}">5</p>
+        <div class="block1 sec">
+            <p class="day" th:text="${futureWeather.day6}">poniedziałek</p>
+            <p class="degrees" th:text="${futureWeather.sixthDayTemp}">6</p>
+            <p class="celc">&#x2103;</p>
+            <img id="pic6" class="imag" src="img/sun.png">
+            <p id="dw6" class="descripweather" th:text="${futureWeather.description6}" > </p>
         </div>
-        <div>
-            <p th:text="${futureWeather.day6}">6</p>
-            <p th:text="${futureWeather.sixthDayTemp}">6</p>
+        <div class="block1 sec">
+            <p class="day" th:text="${futureWeather.day7}">poniedziałek</p>
+            <p class="degrees" th:text="${futureWeather.seventhDayTemp}">7</p>
+            <p class="celc">&#x2103;</p>
+            <img id="pic7" class="imag" src="img/sun.png">
+            <p id="dw7" class="descripweather" th:text="${futureWeather.description7}" > </p>
         </div>
-        <div>
-            <p th:text="${futureWeather.day7}">7</p>
-            <p th:text="${futureWeather.seventhDayTemp}">7</p>
+        <div class="block1 sec">
+            <p class="day" th:text="${futureWeather.day8}">poniedziałek</p>
+            <p class="degrees" th:text="${futureWeather.eighthDayTemp}">8</p>
+            <p class="celc">&#x2103;</p>
+            <img id="pic8" class="imag" src="img/sun.png">
+            <p id="dw8" class="descripweather" th:text="${futureWeather.description8}" > </p>
         </div>
-        <div>
-            <p th:text="${futureWeather.day8}">8</p>
-            <p th:text="${futureWeather.eighthDayTemp}">8</p>
-        </div>
+
+
+        <script type="text/javascript" charset="utf-8">
+
+                var img = document.getElementById('obrazek');
+
+                var tab = ["pic1", "pic2", "pic3", "pic4", "pic5", "pic6", "pic7", "pic8"];
+                var tab2 = ["dw1", "dw2", "dw3", "dw4", "dw5", "dw6", "dw7", "dw8"];
+
+                console.log(tab);
+
+                for (let i=0; i<tab.length; i++) {
+
+                        var el = tab[i];
+                        var el2 = tab2[i];
+
+                        console.log(el);
+                        console.log(el2);
+
+                        if(document.getElementById(el2).innerHTML == "Storm"){
+                           document.getElementById(el).src="/img/storm.png";
+                        }else if(document.getElementById(el2).innerHTML == "Drizzle"){
+                           document.getElementById(el).src="/img/drizzle.png";
+                        }else if(document.getElementById(el2).innerHTML == "Mist"){
+                           document.getElementById('el').src="/img/mist.png";
+                        }else if(document.getElementById(el2).innerHTML == "Rain"){
+                           document.getElementById(el).src="img/rain.png";
+                        }else if(document.getElementById(el2).innerHTML == "Snow"){
+                           document.getElementById(el).src="/img/snow.png";
+                        }else if(document.getElementById(el2).innerHTML == "Clear"){
+                           document.getElementById(el).src="/img/sun.png";
+                        }else if(document.getElementById(el2).innerHTML == "Sun"){
+                           document.getElementById(el).src="/img/sun.png";
+                        }else if(document.getElementById(el2).innerHTML == "Wind"){
+                           document.getElementById(el).src="/img/wind.png";
+                        }
+
+                }
+
+
+        </script>
+
+
 
     </div>
 </div>
+
+<input class="city" value="Wrocław">
 
 </body>
 </html>
