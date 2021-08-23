@@ -7,7 +7,7 @@
 </head>
 <body>
 
-<div>
+<div class="bg">
 
     <form action="/week-weather" method="GET">
         <tr>
@@ -18,41 +18,47 @@
     </form>
 
 
+    <div class="dayweat">
+        <h3>Current Weather</h3>
 
-    <h3>Current Weather</h3>
+        <h3>City Name</h3>
+        <p th:text="${currentWeather.cityName}">City name</p>
+        <h3>Current Conditions</h3>
+        <p th:text="${currentWeather.description}">Description</p>
 
-    <h3>City Name</h3>
-    <p th:text="${currentWeather.cityName}">City name</p>
-    <h3>Current Conditions</h3>
-    <p th:text="${currentWeather.description}">Description</p>
-    <h3>Temperature</h3>
-    <p th:text="${currentWeather.temperature} + ' &#8451;'">Temperature</p>
-    <h3>Zachmurzenie</h3>
-    <p th:text="${currentWeather.cloudPer} + ' %'">Zachmurzenie</p>
+        <div class="tempzac">
+            <h3>Temperature</h3>
+            <p th:text="${currentWeather.temperature} + ' &#8451;'">Temperature</p>
+            <h3>Zachmurzenie</h3>
+            <p th:text="${currentWeather.cloudPer} + ' %'">Zachmurzenie</p>
 
-    <img src="/img/clouds.png" alt="Girl in a jacket" >
-</div>
-
-<div class="timeofday">
-
-
-    <div class="1">
-
-        <h3>Morning              .</h3>
-        <p th:text="${dayWeather.morningTemp} + ' &#8451;'">Morning temp           .</p>
+            <img src="/img/clouds.png" alt="Girl in a jacket" >
+        </div>
 
     </div>
 
-    <div class="2">
+    <div class="timeofday">
 
-        <h3>Midday          .</h3>
-        <p th:text="${dayWeather.middayTemp} + ' &#8451;'">midday temp            .</p>
-    </div>
 
-    <div class="3">
+        <div class="tempw">
 
-        <h3>Evening</h3>
-        <p th:text="${dayWeather.eveningTemp} + ' &#8451;'">Evening temp           .</p>
+            <h3>Morning              .</h3>
+            <p th:text="${dayWeather.morningTemp} + ' &#8451;'">Morning temp           .</p>
+
+        </div>
+
+        <div class="tempw af">
+
+            <h3>Midday          .</h3>
+            <p th:text="${dayWeather.middayTemp} + ' &#8451;'">midday temp            .</p>
+        </div>
+
+        <div class="tempw ev">
+
+            <h3>Evening</h3>
+            <p th:text="${dayWeather.eveningTemp} + ' &#8451;'">Evening temp           .</p>
+
+        </div>
 
     </div>
 

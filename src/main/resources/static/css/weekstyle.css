@@ -44,6 +44,17 @@ body {
 
  }
 
+ .inpcrrday {
+
+    position:absolute;
+    width: 270px;
+    height: 245px;
+    border: 0;
+    border-radius: 30px;
+    background-color: transparent;
+    color: transparent;
+ }
+
  .block1 {
 
      position: relative;
@@ -103,6 +114,7 @@ body {
      right: 7%;
      margin-left: 0px;
      margin-top: 20%;
+
  }
 
  .imag {
@@ -112,6 +124,7 @@ body {
      margin-top: 13%;
      height: 120px;
      width: 120px;
+
  }
 
  .descripweather {

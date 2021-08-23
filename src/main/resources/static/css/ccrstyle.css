@@ -1,6 +1,72 @@
+body {
+
+     background-image: url("/img/bgimg.jpg");
+
+ }
+
+ .bg {
+
+      position: absolute;
+      width: 76vw;
+      height: 75vh;
+      background-color: #0E0F26;
+      opacity: 0.8;
+      left: 12vw;
+      top: 15vh;
+      border-radius: 25px;
+      color: white;
+
+
+  }
+
+.dayweat {
+
+    position: absolute;
+    left: 10%;
+    top: 13%;
+    width: 60vw;
+    height: 25vh;
+    background-color: grey;
+    border-radius: 25px;
+
+}
+
 .timeofday {
 
+    position: absolute;
+    left: 10%;
+    bottom: 10%;
+    width: 60vw;
 
-   display: flex;
+
+}
+
+.tempw {
+
+    background-color: grey;
+    display: inline-block;
+    width: 15vw;
+    height: 23vh;
+    border-radius: 25px;
+
+}
+
+.af {
+
+    margin-left: 12%;
+
+
+}
+
+.ev {
+
+    margin-left: 12%;
+
+
+}
+
+.tempzac {
+
+
 
 }
