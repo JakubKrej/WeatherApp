@@ -67,6 +67,12 @@ body {
 
 .tempzac {
 
+    width: 20%;
+    display: inline-block;
+}
 
+.temp{
+
+    position:relative;
 
 }

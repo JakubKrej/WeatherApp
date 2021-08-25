@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Current Weather</title>
-    <link href="css/ccrstyle.css" rel="stylesheet" type="text/css">
+    <link href="css/home.css" rel="stylesheet" type="text/css">
 </head>
 <body>
 
@@ -19,21 +19,23 @@
 
 
     <div class="dayweat">
-        <h3>Current Weather</h3>
 
-        <h3>City Name</h3>
-        <p th:text="${currentWeather.cityName}">City name</p>
-        <h3>Current Conditions</h3>
-        <p th:text="${currentWeather.description}">Description</p>
 
-        <div class="tempzac">
-            <h3>Temperature</h3>
+        <div class="tempzac temp">
             <p th:text="${currentWeather.temperature} + ' &#8451;'">Temperature</p>
-            <h3>Zachmurzenie</h3>
-            <p th:text="${currentWeather.cloudPer} + ' %'">Zachmurzenie</p>
-
-            <img src="/img/clouds.png" alt="Girl in a jacket" >
         </div>
+        <div class="tempzac name">
+            <p th:text="${currentWeather.cityName}">City name</p>
+        </div>
+        <div class="tempzac desc">
+            <p th:text="${currentWeather.description}">Description</p>
+        </div>
+        <div class="tempzac clau">
+            <p th:text="${currentWeather.cloudPer} + ' %'">Zachmurzenie</p>
+        </div>
+
+        <img src="/img/clouds.png" alt="Girl in a jacket" >
+
 
     </div>
 
