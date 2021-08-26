@@ -4,37 +4,37 @@ import java.math.BigDecimal;
 
 public class DayWeather {
 
-    private BigDecimal morningTemp;
-    private BigDecimal middayTemp;
-    private BigDecimal eveningTemp;
+    private int morningTemp;
+    private int middayTemp;
+    private int eveningTemp;
 
-    public DayWeather(BigDecimal morningTemp, BigDecimal middayTemp, BigDecimal eveningTemp) {
+    public DayWeather(int morningTemp, int middayTemp, int eveningTemp) {
         this.morningTemp = morningTemp;
         this.middayTemp = middayTemp;
         this.eveningTemp = eveningTemp;
     }
 
-    public BigDecimal getMorningTemp() {
+    public int getMorningTemp() {
         return morningTemp;
     }
 
-    public void setMorningTemp(BigDecimal morningTemp) {
+    public void setMorningTemp(int morningTemp) {
         this.morningTemp = morningTemp;
     }
 
-    public BigDecimal getMiddayTemp() {
+    public int getMiddayTemp() {
         return middayTemp;
     }
 
-    public void setMiddayTemp(BigDecimal middayTemp) {
+    public void setMiddayTemp(int middayTemp) {
         this.middayTemp = middayTemp;
     }
 
-    public BigDecimal getEveningTemp() {
+    public int getEveningTemp() {
         return eveningTemp;
     }
 
-    public void setEveningTemp(BigDecimal eveningTemp) {
+    public void setEveningTemp(int eveningTemp) {
         this.eveningTemp = eveningTemp;
     }
 }

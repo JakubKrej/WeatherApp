@@ -2,17 +2,16 @@ package com.WeatherApp;
 
 import java.io.Serializable;
 import java.math.BigDecimal;
-import java.util.Date;
 
 public class CurrentWeather implements Serializable {
 
 
     private String cityName;
-    private BigDecimal temperature;
+    private int temperature;
     private String description;
     private BigDecimal cloudPer;
 
-    public CurrentWeather(String cityName, BigDecimal temperature, String description, BigDecimal cloudPer) {
+    public CurrentWeather(String cityName, int temperature, String description, BigDecimal cloudPer) {
         this.cityName = cityName;
         this.temperature = temperature;
         this.description = description;
@@ -27,11 +26,11 @@ public class CurrentWeather implements Serializable {
         this.cityName = cityName;
     }
 
-    public BigDecimal getTemperature() {
+    public int getTemperature() {
         return temperature;
     }
 
-    public void setTemperature(BigDecimal temperature) {
+    public void setTemperature(int temperature) {
         this.temperature = temperature;
     }
 

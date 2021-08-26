@@ -48,7 +48,7 @@ public class LiveWeatherService {
             JsonNode root = objectMapper.readTree(response.getBody());
 
             return  new CurrentWeather(root.path("name").asText(),
-                    BigDecimal.valueOf(root.path("main").path("temp").asDouble()),
+                    (BigDecimal.valueOf(root.path("main").path("temp").asDouble()).intValue()),
                     root.path("weather").get(0).path("description").asText(),
                     BigDecimal.valueOf(root.path("clouds").path("all").asDouble()));
 //                return new CurrentWeather(name,

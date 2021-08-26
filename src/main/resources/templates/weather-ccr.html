@@ -18,6 +18,11 @@
     </form>
 
 
+    <div class="inps">
+        <input value="BACK">
+        <input class="sec" value="SEARCH">
+    </div>
+
     <div class="dayweat">
 
 
@@ -50,8 +55,8 @@
             <p th:text="${currentWeather.cityName}">Wrocław</p>
         </div>
         <div class="tempzac c">
-            <img class="img" src="/icons/storm.png" alt="Girl in a jacket" >
-            <img class="img" src="/icons/storm.png" alt="Girl in a jacket" >
+            <img class="img1" src="/img/storm.png" alt="Girl in a jacket" >
+            <img class="img2" src="/img/wind.png" alt="Girl in a jacket" >
         </div>
         <div class="tempzac d">
             <p th:text="${currentWeather.description}">Cloud</p>
@@ -65,21 +70,27 @@
 
         <div class="tempw">
 
-            <h3>Morning              .</h3>
-            <p th:text="${dayWeather.morningTemp} + ' &#8451;'">Morning temp           .</p>
+            <h3>Morning</h3>
+            <img class="img" src="/img/storm.png" alt="Girl in a jacket" >
+            <p class="temp1" th:text="${dayWeather.morningTemp}">22</p>
+            <p class="celc1" th:text="' &#8451;'">&#8451;</p>
 
         </div>
 
         <div class="tempw af">
 
-            <h3>Midday          .</h3>
-            <p th:text="${dayWeather.middayTemp} + ' &#8451;'">midday temp            .</p>
+            <h3>Midday</h3>
+            <img class="img" src="/img/storm.png" alt="Girl in a jacket" >
+            <p class="temp1" th:text="${dayWeather.middayTemp}">23</p>
+            <p class="celc1" th:text="' &#8451;'">&#8451;</p>
         </div>
 
         <div class="tempw ev">
 
             <h3>Evening</h3>
-            <p th:text="${dayWeather.eveningTemp} + ' &#8451;'">Evening temp           .</p>
+            <img class="img" src="/img/storm.png" alt="Girl in a jacket" >
+            <p class="temp1" th:text="${dayWeather.eveningTemp}">24</p>
+            <p class="celc1" th:text="' &#8451;'">&#8451;</p>
 
         </div>
 

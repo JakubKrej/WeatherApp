@@ -60,9 +60,9 @@ public class DayWeatherService {
         try {
             JsonNode root = objectMapper.readTree(response.getBody());
 
-            return  new DayWeather(BigDecimal.valueOf(root.path("daily").get(0).path("temp").path("morn").asDouble()),
-                    BigDecimal.valueOf(root.path("daily").get(0).path("temp").path("eve").asDouble()),
-                    BigDecimal.valueOf(root.path("daily").get(0).path("temp").path("night").asDouble()));
+            return  new DayWeather((BigDecimal.valueOf(root.path("daily").get(0).path("temp").path("morn").asDouble()).intValue()),
+                    (BigDecimal.valueOf(root.path("daily").get(0).path("temp").path("eve").asDouble()).intValue()),
+                    (BigDecimal.valueOf(root.path("daily").get(0).path("temp").path("night").asDouble())).intValue());
 
         } catch (JsonProcessingException e) {
             throw new RuntimeException("Error parsing JSON", e);
