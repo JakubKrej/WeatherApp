@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Current Weather</title>
-    <link href="css/home.css" rel="stylesheet" type="text/css">
+    <link href="css/ccrstyle.css" rel="stylesheet" type="text/css">
 </head>
 <body>
 
@@ -21,21 +21,42 @@
     <div class="dayweat">
 
 
-        <div class="tempzac temp">
-            <p th:text="${currentWeather.temperature} + ' &#8451;'">Temperature</p>
-        </div>
-        <div class="tempzac name">
-            <p th:text="${currentWeather.cityName}">City name</p>
-        </div>
-        <div class="tempzac desc">
-            <p th:text="${currentWeather.description}">Description</p>
-        </div>
-        <div class="tempzac clau">
-            <p th:text="${currentWeather.cloudPer} + ' %'">Zachmurzenie</p>
-        </div>
+        <!--
+                <div class="tempzac1">
+                    <p class="temp" th:text="${currentWeather.temperature} + ' &#8451;'">22</p>
+                    <p class="celc" th:text="' &#8451;'">&#8451;</p>
+                </div>
+                <div class="tempzac2 name">
+                    <p th:text="${currentWeather.cityName}">Wrocław</p>
+                </div>
+                <div>
+                    <img class="img" src="/img/clouds.png" alt="Girl in a jacket" >
+                    <img class="img" src="/icons/storm.png" alt="Girl in a jacket" >
+                </div>
+                <div class="tempzac3 desc">
+                    <p th:text="${currentWeather.description}">Cloud</p>
+                </div>
+                <div class="tempzac4 clau">
+                    <p th:text="${currentWeather.cloudPer} + ' %'">22%</p>
+                </div>
+        -->
 
-        <img src="/img/clouds.png" alt="Girl in a jacket" >
 
+        <div class="tempzac a">
+            <p class="temp" th:text="${currentWeather.temperature}">22</p>
+            <p class="celc" th:text="' &#8451;'">&#8451;</p>
+        </div>
+        <div class="tempzac b">
+            <p th:text="${currentWeather.cityName}">Wrocław</p>
+        </div>
+        <div class="tempzac c">
+            <img class="img" src="/icons/storm.png" alt="Girl in a jacket" >
+            <img class="img" src="/icons/storm.png" alt="Girl in a jacket" >
+        </div>
+        <div class="tempzac d">
+            <p th:text="${currentWeather.description}">Cloud</p>
+            <p class="prc" th:text="${currentWeather.cloudPer} + ' %'">22%</p>
+        </div>
 
     </div>
 

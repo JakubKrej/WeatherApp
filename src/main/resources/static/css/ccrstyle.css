@@ -67,12 +67,88 @@ body {
 
 .tempzac {
 
-    width: 20%;
+    float: left;
+    height: 100%;
+
+    }
+
+.a {
+
+    width: 30%;
     display: inline-block;
+
+}
+
+.b {
+
+    width: 40%;
+    font-size: 100px;
+    text-align: center;
+    margin: 0px;
+    padding: 0px;
+
+}
+
+.c {
+
+    width: 15%;
+    display: block;
+    padding-top: 1%;
+
+}
+
+.d {
+
+    width: 15%;
+    display: block;
+    font-size: 40px;
+
+
 }
 
 .temp{
 
-    position:relative;
+    position: absolute;
+    font-size: 180px;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    margin-left: 8%;
+    margin-top: 3%;
+    font-weight: bold;
 
 }
+
+.celc {
+
+    position: relative;
+    float: right;
+    right: 15%;
+    top: 13%;
+    font-size: 40px;
+    width: 40px;
+    padding: 0px;
+    margin: 0px;
+    font-weight: bold;
+
+}
+
+
+
+.img {
+
+    position: relative;
+    left: 15%;
+    width: 100px;
+    height: 100px;
+    margin: 5%;
+    margin-top: 0%;
+
+}
+
+
+.prc{
+
+    margin-top: 60px;
+}
+
