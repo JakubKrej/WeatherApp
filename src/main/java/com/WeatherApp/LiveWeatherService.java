@@ -51,12 +51,7 @@ public class LiveWeatherService {
                     (BigDecimal.valueOf(root.path("main").path("temp").asDouble()).intValue()),
                     root.path("weather").get(0).path("description").asText(),
                     BigDecimal.valueOf(root.path("clouds").path("all").asDouble()));
-//                return new CurrentWeather(name,
-//                    root.path("current").path("weather").get(0).path("description").asText(),
-//                    BigDecimal.valueOf(root.path("current").path("feels_like").asDouble()),
-//                    BigDecimal.valueOf(root.path("current").path("temp").asDouble()),
-//                    BigDecimal.valueOf(root.path("current").path("wind_speed").asDouble()),
-//                    ConvertTime((root.path("current").path("sunrise")).asInt()));
+
 
         } catch (JsonProcessingException e) {
             throw new RuntimeException("Error parsing JSON", e);

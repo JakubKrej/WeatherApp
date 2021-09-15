@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Current Weather</title>
-    <link href="css/ccrstyle.css" rel="stylesheet" type="text/css">
+    <link href="./css/ccrstyle.css" rel="stylesheet" type="text/css">
 </head>
 <body>
 
@@ -48,7 +48,7 @@
 
 
         <div class="tempzac a">
-            <p class="temp" th:text="${currentWeather.temperature}">22</p>
+            <p class="temp" th:text="${dayWeather.temperature}">22</p>
             <p class="celc" th:text="' &#8451;'">&#8451;</p>
         </div>
         <div class="tempzac b">
@@ -59,8 +59,8 @@
             <img class="img2" src="/img/wind.png" alt="Girl in a jacket" >
         </div>
         <div class="tempzac d">
-            <p th:text="${currentWeather.description}">Cloud</p>
-            <p class="prc" th:text="${currentWeather.cloudPer} + ' %'">22%</p>
+            <p th:text="${dayWeather.description}">Cloud</p>
+            <p class="prc" th:text="${dayWeather.cloudPer} + ' %'">22%</p>
         </div>
 
     </div>

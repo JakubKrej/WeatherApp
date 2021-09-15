@@ -34,12 +34,21 @@ body {
 
  }
 
+.fom {
+
+    display: inline-block;
+    margin-left: 2%;
+     margin-right: 2%;
+     margin-bottom: 4%;
+
+}
+
  .block{
 
      position: relative;
-     margin-top: 6%;
      width: 90%;
      height: 80%;
+     top: 2%;
      left: 5%;
 
  }
@@ -62,9 +71,6 @@ body {
      height: 245px;
      display: inline-block;
      background-color: blueviolet;
-     margin-left: 2%;
-     margin-right: 2%;
-     margin-bottom: 4%;
      border: 0;
      border-radius: 30px;
 

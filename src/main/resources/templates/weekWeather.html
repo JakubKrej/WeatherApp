@@ -3,15 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <title>Current Weather</title>
-    <link href="css/weekstyle.css" rel="stylesheet" type="text/css">
+    <link href="./css/weekstyle.css" rel="stylesheet" type="text/css">
 </head>
 <body>
 
-
-
-
 <div class="bg">
-
 
     <form action="/current-weather" method="GET">
         <tr>
@@ -22,74 +18,87 @@
     </form>
 
 
-
     <div class="block" >
-        <form action="/current-weather" method="GET">
-        <div class="block1 sec" type="submit" >
-
-            <p class="day" th:text="${futureWeather.day1}">poniedziałek</p>
-            <p class="degrees" th:text="${futureWeather.curentDayTemp}">16</p>
-            <p class="celc">&#x2103;</p>
-            <img id="pic1" class="imag" src="img/sun.png">
-            <p id="dw1" class="descripweather" th:text="${futureWeather.description1}"> </p>
-            <input class="inpcrrday" type="submit" th:value="${currentWeather.cityName}" name="city" >
-        </div>
-        <div class="block1 sec">
-            <p class="day" th:text="${futureWeather.day2}">poniedziałek</p>
-            <p class="degrees" th:text="${futureWeather.secendDayTemp}">22</p>
-            <p class="celc">&#x2103;</p>
-            <img id="pic2" class="imag" src="img/sun.png">
-            <p id="dw2" class="descripweather" th:text="${futureWeather.description2}" > </p>
-            <input class="inpcrrday" type="submit" th:value="${currentWeather.cityName}" name="city" >
-        </div>
-        <div class="block1 sec">
-            <p  class="day" th:text="${futureWeather.day3}">poniedziałek3</p>
-            <p  class="degrees" th:text="${futureWeather.thirdDayTemp}">33</p>
-            <p class="celc">&#x2103;</p>
-            <img id="pic3" class="imag" src="img/sun.png">
-            <p  id="dw3" class="descripweather" th:text="${futureWeather.description3}" > </p>
-            <input class="inpcrrday" type="submit" th:value="${currentWeather.cityName}" name="city" >
-        </div>
-        <div class="block1 sec">
-            <p class="day" th:text="${futureWeather.day4}">4poniedziałek</p>
-            <p class="degrees" th:text="${futureWeather.fourthDayTemp}">4</p>
-            <p class="celc">&#x2103;</p>
-            <img id="pic4" class="imag" src="img/sun.png">
-            <p id="dw4" class="descripweather" th:text="${futureWeather.description4}" > </p>
-            <input class="inpcrrday" type="submit" th:value="${currentWeather.cityName}" name="city" >
-        </div>
-        <div class="block1 sec">
-            <p class="day" th:text="${futureWeather.day5}">poniedziałek</p>
-            <p class="degrees" th:text="${futureWeather.fifthDayTemp}">5</p>
-            <p class="celc">&#x2103;</p>
-            <img id="pic5" class="imag" src="img/sun.png">
-            <p id="dw5" class="descripweather" th:text="${futureWeather.description5}" > </p>
-            <input class="inpcrrday" type="submit" th:value="${currentWeather.cityName}" name="city" >
-        </div>
-        <div class="block1 sec">
-            <p class="day" th:text="${futureWeather.day6}">poniedziałek</p>
-            <p class="degrees" th:text="${futureWeather.sixthDayTemp}">6</p>
-            <p class="celc">&#x2103;</p>
-            <img id="pic6" class="imag" src="img/sun.png">
-            <p id="dw6" class="descripweather" th:text="${futureWeather.description6}" > </p>
-            <input class="inpcrrday" type="submit" th:value="${currentWeather.cityName}" name="city" >
-        </div>
-        <div class="block1 sec">
-            <p class="day" th:text="${futureWeather.day7}">poniedziałek</p>
-            <p class="degrees" th:text="${futureWeather.seventhDayTemp}">7</p>
-            <p class="celc">&#x2103;</p>
-            <img id="pic7" class="imag" src="img/sun.png">
-            <p id="dw7" class="descripweather" th:text="${futureWeather.description7}" > </p>
-            <input class="inpcrrday" type="submit" th:value="${currentWeather.cityName}" name="city" >
-        </div>
-        <div class="block1 sec">
-            <p class="day" th:text="${futureWeather.day8}">poniedziałek</p>
-            <p class="degrees" th:text="${futureWeather.eighthDayTemp}">8</p>
-            <p class="celc">&#x2103;</p>
-            <img id="pic8" class="imag" src="img/sun.png">
-            <p id="dw8" class="descripweather" th:text="${futureWeather.description8}" > </p>
-            <input class="inpcrrday" type="submit" th:value="${currentWeather.cityName}" name="city" >
-        </div>
+        <form class="fom" action="/dayweather0" method="GET">
+            <div class="block1 sec" type="submit" >
+                <p class="day" th:text="${futureWeather.day1}">poniedziałek</p>
+                <p class="degrees" th:text="${futureWeather.curentDayTemp}">16</p>
+                <p class="celc">&#x2103;</p>
+                <img id="pic1" class="imag" src="img/sun.png">
+                <p id="dw1" class="descripweather" th:text="${futureWeather.description1}"> </p>
+                <input class="inpcrrday" type="submit" th:value="${currentWeather.cityName}" name="city" >
+            </div>
+        </form>
+        <form class="fom" action="/dayweather1" method="GET">
+            <div onclick="location.href='/current-weather'" class="block1 sec">
+                <p class="day" th:text="${futureWeather.day2}">poniedziałek</p>
+                <p class="degrees" th:text="${futureWeather.secendDayTemp}">22</p>
+                <p class="celc">&#x2103;</p>
+                <img id="pic2" class="imag" src="img/sun.png">
+                <p id="dw2" class="descripweather" th:text="${futureWeather.description2}" > </p>
+                <input class="inpcrrday" type="submit" th:value="${currentWeather.cityName}" name="city" >
+            </div>
+        </form>
+        <form class="fom" action="/dayweather2" method="GET">
+            <div class="block1 sec">
+                <p  class="day" th:text="${futureWeather.day3}">poniedziałek3</p>
+                <p  class="degrees" th:text="${futureWeather.thirdDayTemp}">33</p>
+                <p class="celc">&#x2103;</p>
+                <img id="pic3" class="imag" src="img/sun.png">
+                <p  id="dw3" class="descripweather" th:text="${futureWeather.description3}" > </p>
+                <input class="inpcrrday" type="submit" th:value="${currentWeather.cityName}" name="city" >
+            </div>
+        </form>
+        <form class="fom" action="/dayweather3" method="GET">
+            <div class="block1 sec">
+                <p class="day" th:text="${futureWeather.day4}">4poniedziałek</p>
+                <p class="degrees" th:text="${futureWeather.fourthDayTemp}">4</p>
+                <p class="celc">&#x2103;</p>
+                <img id="pic4" class="imag" src="img/sun.png">
+                <p id="dw4" class="descripweather" th:text="${futureWeather.description4}" > </p>
+                <input class="inpcrrday" type="submit" th:value="${currentWeather.cityName}" name="city" >
+            </div>
+        </form>
+        <form class="fom" action="/dayweather4" method="GET">
+            <div class="block1 sec">
+                <p class="day" th:text="${futureWeather.day5}">poniedziałek</p>
+                <p class="degrees" th:text="${futureWeather.fifthDayTemp}">5</p>
+                <p class="celc">&#x2103;</p>
+                <img id="pic5" class="imag" src="img/sun.png">
+                <p id="dw5" class="descripweather" th:text="${futureWeather.description5}" > </p>
+                <input class="inpcrrday" type="submit" th:value="${currentWeather.cityName}" name="city" >
+            </div>
+        </form>
+        <form class="fom" action="/dayweather5" method="GET">
+            <div class="block1 sec">
+                <p class="day" th:text="${futureWeather.day6}">poniedziałek</p>
+                <p class="degrees" th:text="${futureWeather.sixthDayTemp}">6</p>
+                <p class="celc">&#x2103;</p>
+                <img id="pic6" class="imag" src="img/sun.png">
+                <p id="dw6" class="descripweather" th:text="${futureWeather.description6}" > </p>
+                <input class="inpcrrday" type="submit" th:value="${currentWeather.cityName}" name="city" >
+            </div>
+        </form>
+        <form class="fom" action="/dayweather6" method="GET">
+            <div class="block1 sec">
+                <p class="day" th:text="${futureWeather.day7}">poniedziałek</p>
+                <p class="degrees" th:text="${futureWeather.seventhDayTemp}">7</p>
+                <p class="celc">&#x2103;</p>
+                <img id="pic7" class="imag" src="img/sun.png">
+                <p id="dw7" class="descripweather" th:text="${futureWeather.description7}" > </p>
+                <input class="inpcrrday" type="submit" th:value="${currentWeather.cityName}" name="city" >
+            </div>
+        </form>
+        <form class="fom" action="/dayweather7" method="GET">
+            <div class="block1 sec">
+                <p class="day" th:text="${futureWeather.day8}">poniedziałek</p>
+                <p class="degrees" th:text="${futureWeather.eighthDayTemp}">8</p>
+                <p class="celc">&#x2103;</p>
+                <img id="pic8" class="imag" src="img/sun.png">
+                <p id="dw8" class="descripweather" th:text="${futureWeather.description8}" > </p>
+                <input class="inpcrrday" type="submit" th:value="${currentWeather.cityName}" name="city" >
+            </div>
+        </form>
 
 
         <script type="text/javascript" charset="utf-8">
@@ -134,7 +143,7 @@
 
         </script>
 
-        </form>
+
 
     </div>
 </div>

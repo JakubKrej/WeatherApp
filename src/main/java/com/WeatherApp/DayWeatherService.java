@@ -21,6 +21,7 @@ public class DayWeatherService {
     private String lat;
     private String lon;
     public String name;
+    int dnumber;
 
     private final RestTemplate restTemplate;
     private final ObjectMapper objectMapper;
@@ -30,7 +31,7 @@ public class DayWeatherService {
         this.objectMapper = objectMapper;
     }
 
-    public DayWeather getDayTemp(String city){
+    public DayWeather getDayTemp(String city, int dnumber){
 
         URI url = new UriTemplate(WEATHER_URL1).expand(city,apiKey);
         ResponseEntity<String> response = restTemplate.getForEntity(url, String.class);
@@ -44,6 +45,7 @@ public class DayWeatherService {
 
             System.out.println(lat + " " + lon + " " + name);
 
+
         } catch (JsonProcessingException e) {
             throw new RuntimeException("Error parsing JSON", e);
         }
@@ -51,18 +53,22 @@ public class DayWeatherService {
         URI url2 = new UriTemplate(WEATHER_URL2).expand(lat,lon,apiKey);
         ResponseEntity<String> response2 = restTemplate.getForEntity(url2, String.class);
 
-        return convert(response2);
+        return convert(response2,dnumber);
 
     }
 
 
-    private DayWeather convert(ResponseEntity<String> response) {
+    private DayWeather convert(ResponseEntity<String> response, int dnumber) {
         try {
             JsonNode root = objectMapper.readTree(response.getBody());
 
-            return  new DayWeather((BigDecimal.valueOf(root.path("daily").get(0).path("temp").path("morn").asDouble()).intValue()),
-                    (BigDecimal.valueOf(root.path("daily").get(0).path("temp").path("eve").asDouble()).intValue()),
-                    (BigDecimal.valueOf(root.path("daily").get(0).path("temp").path("night").asDouble())).intValue());
+            return  new DayWeather((BigDecimal.valueOf(root.path("daily").get(dnumber).path("temp").path("morn").asDouble()).intValue()),
+                    (BigDecimal.valueOf(root.path("daily").get(dnumber).path("temp").path("eve").asDouble()).intValue()),
+                    (BigDecimal.valueOf(root.path("daily").get(dnumber).path("temp").path("night").asDouble())).intValue(),
+                    (BigDecimal.valueOf(root.path("daily").get(dnumber).path("temp").path("day").asDouble()).intValue()),
+                    root.path("daily").get(dnumber).path("weather").path("description").asText(),
+                    BigDecimal.valueOf(root.path("daily").get(dnumber).path("clouds").asDouble())
+            );
 
         } catch (JsonProcessingException e) {
             throw new RuntimeException("Error parsing JSON", e);
