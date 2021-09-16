@@ -3,24 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <title>Current Weather</title>
-    <link href="./css/ccrstyle.css" rel="stylesheet" type="text/css">
+    <link href="css/ccrstyle.css" rel="stylesheet" type="text/css">
 </head>
 <body>
 
 <div class="bg">
 
-    <form action="/week-weather" method="GET">
-        <tr>
-            <td><input th:value="${currentWeather.cityName}" name="city" ></td>
-            <input  type="submit" value="Back to week weather"  >
-        </tr>
-
-    </form>
-
 
     <div class="inps">
-        <input value="BACK">
-        <input class="sec" value="SEARCH">
+        <form class="fom1" action="/week-weather" method="GET">
+            <input class="nmcit" th:value="${currentWeather.cityName}" name="city" >
+            <input type="submit" value="BACK">
+        </form>
+
+        <a href="/"><input class="sec" value="SEARCH"></a>
     </div>
 
     <div class="dayweat">
@@ -59,7 +55,7 @@
             <img class="img2" src="/img/wind.png" alt="Girl in a jacket" >
         </div>
         <div class="tempzac d">
-            <p th:text="${dayWeather.description}">Cloud</p>
+            <p class="dsc" th:text="${dayWeather.description}">Cloud</p>
             <p class="prc" th:text="${dayWeather.cloudPer} + ' %'">22%</p>
         </div>
 
@@ -72,8 +68,8 @@
 
             <h3>Morning</h3>
             <img class="img" src="/img/storm.png" alt="Girl in a jacket" >
-            <p class="temp1" th:text="${dayWeather.morningTemp}">22</p>
             <p class="celc1" th:text="' &#8451;'">&#8451;</p>
+            <p class="temp1" th:text="${dayWeather.morningTemp}">22</p>
 
         </div>
 
@@ -81,16 +77,16 @@
 
             <h3>Midday</h3>
             <img class="img" src="/img/storm.png" alt="Girl in a jacket" >
-            <p class="temp1" th:text="${dayWeather.middayTemp}">23</p>
             <p class="celc1" th:text="' &#8451;'">&#8451;</p>
+            <p class="temp1" th:text="${dayWeather.middayTemp}">23</p>
         </div>
 
         <div class="tempw ev">
 
             <h3>Evening</h3>
             <img class="img" src="/img/storm.png" alt="Girl in a jacket" >
-            <p class="temp1" th:text="${dayWeather.eveningTemp}">24</p>
             <p class="celc1" th:text="' &#8451;'">&#8451;</p>
+            <p class="temp1" th:text="${dayWeather.eveningTemp}">24</p>
 
         </div>
 

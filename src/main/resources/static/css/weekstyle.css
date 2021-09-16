@@ -34,24 +34,24 @@ body {
 
  }
 
-.fom {
-
-    display: inline-block;
-    margin-left: 2%;
-     margin-right: 2%;
-     margin-bottom: 4%;
-
-}
-
  .block{
 
      position: relative;
      width: 90%;
      height: 80%;
-     top: 2%;
+     top: 12%;
      left: 5%;
 
  }
+
+.fom {
+
+    display: inline-block;
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-bottom: 4%;
+
+}
 
  .inpcrrday {
 
@@ -62,6 +62,7 @@ body {
     border-radius: 30px;
     background-color: transparent;
     color: transparent;
+    cursor: pointer;
  }
 
  .block1 {

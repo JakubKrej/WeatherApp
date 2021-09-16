@@ -32,7 +32,6 @@ body {
     position: relative;
     width: 100%;
 
-
 }
 
 .inpser{
@@ -67,7 +66,7 @@ body {
     font-weight: bold;
     background-color: white;
     font-size: 15px;
-
+    cursor: pointer;
 
 }
 

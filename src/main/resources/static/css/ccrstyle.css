@@ -43,7 +43,7 @@ body {
 .timeofday h3{
 
     background-color: white;
-    height: 35px;
+    height: 40px;
     margin: 0;
     border-radius: 25px;
     color: black;
@@ -54,7 +54,6 @@ body {
 }
 
 .tempw {
-
 
     background-color: grey;
     display: inline-block;
@@ -90,25 +89,23 @@ body {
 }
 
 
-
-.tempw .temp1{
+.temp1{
 
     position: relative;
     float: right;
-    right: 17%;
-    top: 40px;
+    right: 5%;
+    top: 45px;
     margin: 0px;
     font-size: 80px;
     text-align: center;
 
 }
 
-.tempw .celc1 {
-
+.celc1 {
 
     position: relative;
     float: right;
-    right: -65px;
+    right: 5%;
     top: 15%;
     font-size: 20px;
     width: 40px;
@@ -223,6 +220,12 @@ body {
 
 }
 
+.dsc{
+
+    position: relative;
+    top: 25px;
+
+}
 
 .prc{
 
@@ -232,24 +235,46 @@ body {
 
 .inps {
 
-    position: absolute;
+    position: relative;
+    display: inline-block;
     left: 42%;
-    top: 10%;
+    top: 8%;
     width: 16%;
-    height: 50px;
+    height: 55px;
     z-index: 3;
+
 }
 
 .inps input {
 
+    position: absolute;
     width: 100px;
     text-align: center;
-    height: 50px;
+    height: 55px;
+    border-radius: 20px;
+    border: 0px;
+    font-weight: bold;
+    cursor: pointer;
 
 }
 
-.inps .sec{
+.sec{
 
+    right: 0px;
     margin-left: 10px;
+
+}
+
+.fom1 {
+
+    width: 45%;
+}
+
+.nmcit {
+
+    position: absolute;
+    background: transparent;
+    color: transparent;
+    border: none;
 
 }

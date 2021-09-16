@@ -15,7 +15,7 @@ import java.net.URI;
 public class DayWeatherService {
 
     private static final String WEATHER_URL1 = "https://api.openweathermap.org/data/2.5/weather?q={city}&units=metric&appid={apiKey}";
-    private static final String WEATHER_URL2 = "https://api.openweathermap.org/data/2.5/onecall?lat={lat}&lon={lon}&lang=pl&units=metric&cnt=7&appid={apiKey}";
+    private static final String WEATHER_URL2 = "https://api.openweathermap.org/data/2.5/onecall?lat={lat}&lon={lon}&units=metric&cnt=7&appid={apiKey}";
     private String apiKey = "82147517e164e7f3f595dd941837b9be";
 
     private String lat;
@@ -66,7 +66,7 @@ public class DayWeatherService {
                     (BigDecimal.valueOf(root.path("daily").get(dnumber).path("temp").path("eve").asDouble()).intValue()),
                     (BigDecimal.valueOf(root.path("daily").get(dnumber).path("temp").path("night").asDouble())).intValue(),
                     (BigDecimal.valueOf(root.path("daily").get(dnumber).path("temp").path("day").asDouble()).intValue()),
-                    root.path("daily").get(dnumber).path("weather").path("description").asText(),
+                    root.path("daily").get(dnumber).path("weather").get(0).path("description").asText(),
                     BigDecimal.valueOf(root.path("daily").get(dnumber).path("clouds").asDouble())
             );
 
