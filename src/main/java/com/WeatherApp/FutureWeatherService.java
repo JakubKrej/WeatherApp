@@ -59,7 +59,6 @@ public class FutureWeatherService {
 
     }
 
-
     private FutureWeather convert(ResponseEntity<String> response) {
         try {
             JsonNode root = objectMapper.readTree(response.getBody());
@@ -98,9 +97,7 @@ public class FutureWeatherService {
 
     }
 
-
     private String ConvertTime(int val){
-
 
         Date date = new Date(val*1000L);
 

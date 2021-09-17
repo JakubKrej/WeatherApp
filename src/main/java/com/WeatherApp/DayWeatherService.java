@@ -21,7 +21,6 @@ public class DayWeatherService {
     private String lat;
     private String lon;
     public String name;
-    int dnumber;
 
     private final RestTemplate restTemplate;
     private final ObjectMapper objectMapper;
@@ -56,7 +55,6 @@ public class DayWeatherService {
         return convert(response2,dnumber);
 
     }
-
 
     private DayWeather convert(ResponseEntity<String> response, int dnumber) {
         try {

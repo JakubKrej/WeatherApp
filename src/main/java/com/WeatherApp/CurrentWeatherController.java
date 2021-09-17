@@ -6,8 +6,11 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.client.HttpStatusCodeException;
+import org.springframework.web.util.UriTemplate;
 
 import java.math.BigDecimal;
+import java.net.URI;
 import java.util.Date;
 
 
@@ -41,21 +44,17 @@ public class CurrentWeatherController {
 
         String cityName = city.getCity();
 
-        System.out.println( "controller 1 " + cityName);
-        System.out.println(liveWeatherService.ConvertTime());
-        Date timee = new Date();
-        String day;
-        System.out.println(timee.getDay());
+        try {
 
-        model.addAttribute("currentWeather", liveWeatherService.getCurrentWeatherByCity(cityName));
-        model.addAttribute("futureWeather", futureWeatherService.getFutureWeatherByCity(cityName));
-        model.addAttribute("dayofweek", liveWeatherService.ConvertTime());
+            model.addAttribute("currentWeather", liveWeatherService.getCurrentWeatherByCity(cityName));
+            model.addAttribute("futureWeather", futureWeatherService.getFutureWeatherByCity(cityName));
+            model.addAttribute("dayofweek", liveWeatherService.ConvertTime());
 
+        }catch (HttpStatusCodeException exception) {
 
-
-//        past weather
-//        current weather
-//        feature weather
+            System.out.println("Podane miasto nie znajduje się w bazie danych");
+            return("citySearch");
+        }
 
         return "weekWeather";
     }
@@ -77,8 +76,6 @@ public class CurrentWeatherController {
     public String getDayWeather(Model model, City city, @PathVariable("dnumber") int dnumber){
 
         String cityName = city.getCity();
-
-        System.out.println(dnumber);
 
         model.addAttribute("currentWeather", liveWeatherService.getCurrentWeatherByCity(cityName));
         model.addAttribute("dayWeather", dayWeatherService.getDayTemp(cityName,dnumber));

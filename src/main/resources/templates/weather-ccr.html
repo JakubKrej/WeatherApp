@@ -12,8 +12,8 @@
 
     <div class="inps">
         <form class="fom1" action="/week-weather" method="GET">
-            <input class="nmcit" th:value="${currentWeather.cityName}" name="city" >
-            <input type="submit" value="BACK">
+            <input class="nmcit" th:value="${currentWeather.cityName}" name="city" readonly>
+            <input type="submit" value="BACK" readonly>
         </form>
 
         <a href="/"><input class="sec" value="SEARCH"></a>

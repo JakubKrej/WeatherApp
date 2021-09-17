@@ -6,6 +6,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.boot.web.client.RestTemplateBuilder;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
+import org.springframework.web.client.HttpStatusCodeException;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.util.UriTemplate;
 
@@ -31,15 +32,12 @@ public class LiveWeatherService {
 
     public CurrentWeather getCurrentWeatherByCity(String city){
 
-        System.out.println("aaaaa");
-        System.out.println(city);
-        System.out.println("aaaaa");
+        ResponseEntity<String> response = null;
 
-        URI url = new UriTemplate(WEATHER_URL1).expand(city,apiKey);
-        ResponseEntity<String> response = restTemplate.getForEntity(url, String.class);
+            URI url = new UriTemplate(WEATHER_URL1).expand(city,apiKey);
+            response = restTemplate.getForEntity(url, String.class);
 
         return convert(response);
-
     }
 
 
@@ -52,13 +50,11 @@ public class LiveWeatherService {
                     root.path("weather").get(0).path("description").asText(),
                     BigDecimal.valueOf(root.path("clouds").path("all").asDouble()));
 
-
         } catch (JsonProcessingException e) {
             throw new RuntimeException("Error parsing JSON", e);
         }
 
     }
-
 
     public String ConvertTime(){
 
@@ -93,16 +89,6 @@ public class LiveWeatherService {
         return day;
     }
 
-//    private CurrentWeather convert(ResponseEntity<String> response) {
-//
-//        ObjectMapper objectMapper = new ObjectMapper();
-//        JsonNode jsonNode = objectMapper.readTree(String.valueOf(response));
-//        JsonNode fi1 = jsonNode.get("main");
-//        JsonNode fi2 = jsonNode.get("temp");
-//        JsonNode fi3 = jsonNode.get("feels_like");
-//        JsonNode fi4 = jsonNode.get("speed");
-//
-//        return
-//    }
+
 
 }
