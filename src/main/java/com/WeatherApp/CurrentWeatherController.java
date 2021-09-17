@@ -82,6 +82,7 @@ public class CurrentWeatherController {
 
         model.addAttribute("currentWeather", liveWeatherService.getCurrentWeatherByCity(cityName));
         model.addAttribute("dayWeather", dayWeatherService.getDayTemp(cityName,dnumber));
+
         return "weather-ccr";
     }
 }

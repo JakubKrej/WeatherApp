@@ -22,14 +22,14 @@ body {
 
      position: absolute;
      width: 30vw;
-     height: 60px;
+     height: 80px;
      left: 35vw;
-     top: 13vh;
-     background-color: aqua;
+     top: 12vh;
+     background-color: white;
      text-align: center;
-     border-radius: 30px;
+     border-radius: 45px;
      border: 0;
-     font-size: 30px;
+     font-size: 35px;
      font-weight: bold;
 
  }
@@ -39,7 +39,7 @@ body {
      position: relative;
      width: 90%;
      height: 80%;
-     top: 12%;
+     top: 15%;
      left: 5%;
 
  }
@@ -71,7 +71,7 @@ body {
      width: 270px;
      height: 245px;
      display: inline-block;
-     background-color: blueviolet;
+     background-color: grey;
      border: 0;
      border-radius: 30px;
 

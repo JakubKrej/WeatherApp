@@ -9,13 +9,13 @@
 
 <div class="bg">
 
-    <form action="/current-weather" method="GET">
-        <tr>
-            <td><input th:value="${currentWeather.cityName}" name="city" ></td>
-            <input  type="submit" value="Current Day"  >
-        </tr>
+    <!--    <form action="/current-weather" method="GET">-->
+    <!--        <tr>-->
+    <!--            <td><input th:value="${currentWeather.cityName}" name="city" ></td>-->
+    <!--            <input  type="submit" value="Current Day"  >-->
+    <!--        </tr>-->
 
-    </form>
+    <!--    </form>-->
 
 
     <div class="block" >
@@ -105,20 +105,14 @@
 
         <script type="text/javascript" charset="utf-8">
 
-                var img = document.getElementById('obrazek');
 
                 var tab = ["pic1", "pic2", "pic3", "pic4", "pic5", "pic6", "pic7", "pic8"];
                 var tab2 = ["dw1", "dw2", "dw3", "dw4", "dw5", "dw6", "dw7", "dw8"];
-
-                console.log(tab);
 
                 for (let i=0; i<tab.length; i++) {
 
                         var el = tab[i];
                         var el2 = tab2[i];
-
-                        console.log(el);
-                        console.log(el2);
 
                         if(document.getElementById(el2).innerHTML == "Storm"){
                            document.getElementById(el).src="/img/storm.png";

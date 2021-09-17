@@ -51,10 +51,11 @@
             <p th:text="${currentWeather.cityName}">Wrocław</p>
         </div>
         <div class="tempzac c">
-            <img class="img1" src="/img/storm.png" alt="Girl in a jacket" >
-            <img class="img2" src="/img/wind.png" alt="Girl in a jacket" >
+            <img id="dssc1" class="img1" src="/img/storm.png" alt="Girl in a jacket" >
+            <img class="img2" src="/img/clouds.png" alt="Girl in a jacket" >
         </div>
         <div class="tempzac d">
+            <p class="madsc" id="dssc2" th:text="${dayWeather.mainDesc}"></p>
             <p class="dsc" th:text="${dayWeather.description}">Cloud</p>
             <p class="prc" th:text="${dayWeather.cloudPer} + ' %'">22%</p>
         </div>
@@ -67,7 +68,7 @@
         <div class="tempw">
 
             <h3>Morning</h3>
-            <img class="img" src="/img/storm.png" alt="Girl in a jacket" >
+            <img id="dssc3" class="img" src="/img/storm.png" alt="Girl in a jacket" >
             <p class="celc1" th:text="' &#8451;'">&#8451;</p>
             <p class="temp1" th:text="${dayWeather.morningTemp}">22</p>
 
@@ -76,7 +77,7 @@
         <div class="tempw af">
 
             <h3>Midday</h3>
-            <img class="img" src="/img/storm.png" alt="Girl in a jacket" >
+            <img id="dssc4" class="img" src="/img/storm.png" alt="Girl in a jacket" >
             <p class="celc1" th:text="' &#8451;'">&#8451;</p>
             <p class="temp1" th:text="${dayWeather.middayTemp}">23</p>
         </div>
@@ -84,7 +85,7 @@
         <div class="tempw ev">
 
             <h3>Evening</h3>
-            <img class="img" src="/img/storm.png" alt="Girl in a jacket" >
+            <img id="dssc5" class="img" src="/img/storm.png" alt="Girl in a jacket" >
             <p class="celc1" th:text="' &#8451;'">&#8451;</p>
             <p class="temp1" th:text="${dayWeather.eveningTemp}">24</p>
 
@@ -93,7 +94,65 @@
     </div>
 
 
+    <script type="text/javascript" charset="utf-8">
 
+                var el1 = "dssc2";
+                var el2 = "dssc1";
+                var el3 = "dssc4";
+                var el4 = "dssc3";
+                var el5 = "dssc5";
+
+
+
+                        if(document.getElementById(el1).innerHTML == "Storm"){
+                           document.getElementById(el2).src="/img/storm.png";
+                           document.getElementById(el3).src="/img/storm.png";
+                           document.getElementById(el4).src="/img/storm.png";
+                           document.getElementById(el5).src="/img/storm.png";
+                        }else if(document.getElementById(el1).innerHTML == "Drizzle"){
+                           document.getElementById(el2).src="/img/drizzle.png";
+                           document.getElementById(el3).src="/img/drizzle.png";
+                           document.getElementById(el4).src="/img/drizzle.png";
+                           document.getElementById(el5).src="/img/drizzle.png";
+                        }else if(document.getElementById(el1).innerHTML == "Mist"){
+                           document.getElementById(el2).src="/img/mist.png";
+                           document.getElementById(el3).src="/img/mist.png";
+                           document.getElementById(el4).src="/img/mist.png";
+                           document.getElementById(el5).src="/img/mist.png";
+                        }else if(document.getElementById(el1).innerHTML == "Rain"){
+                           document.getElementById(el2).src="img/rain.png";
+                           document.getElementById(el3).src="/img/rain.png";
+                           document.getElementById(el4).src="/img/rain.png";
+                           document.getElementById(el5).src="/img/rain.png";
+                        }else if(document.getElementById(el1).innerHTML == "Snow"){
+                           document.getElementById(el2).src="/img/snow.png";
+                           document.getElementById(el3).src="/img/snow.png";
+                           document.getElementById(el4).src="/img/snow.png";
+                           document.getElementById(el5).src="/img/snow.png";
+                        }else if(document.getElementById(el1).innerHTML == "Clear"){
+                           document.getElementById(el2).src="/img/sun.png";
+                           document.getElementById(el2).src="/img/sun.png";
+                           document.getElementById(el3).src="/img/sun.png";
+                           document.getElementById(el4).src="/img/sun.png";
+                           document.getElementById(el5).src="/img/sun.png";
+                        }else if(document.getElementById(el1).innerHTML == "Sun"){
+                           document.getElementById(el2).src="/img/sun.png";
+                           document.getElementById(el3).src="/img/sun.png";
+                           document.getElementById(el4).src="/img/sun.png";
+                           document.getElementById(el5).src="/img/sun.png";
+                        }else if(document.getElementById(el1).innerHTML == "Wind"){
+                           document.getElementById(el2).src="/img/wind.png";
+                           document.getElementById(el3).src="/img/wind.png";
+                           document.getElementById(el4).src="/img/wind.png";
+                           document.getElementById(el5).src="/img/wind.png";
+                        }else if(document.getElementById(el1).innerHTML == "Clouds"){
+                           document.getElementById(el2).src="/img/clouds.png";
+                           document.getElementById(el3).src="/img/clouds.png";
+                           document.getElementById(el4).src="/img/clouds.png";
+                           document.getElementById(el5).src="/img/clouds.png";
+                        }
+
+        </script>
 </div>
 
 </body>

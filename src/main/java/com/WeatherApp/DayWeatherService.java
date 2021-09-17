@@ -67,7 +67,8 @@ public class DayWeatherService {
                     (BigDecimal.valueOf(root.path("daily").get(dnumber).path("temp").path("night").asDouble())).intValue(),
                     (BigDecimal.valueOf(root.path("daily").get(dnumber).path("temp").path("day").asDouble()).intValue()),
                     root.path("daily").get(dnumber).path("weather").get(0).path("description").asText(),
-                    BigDecimal.valueOf(root.path("daily").get(dnumber).path("clouds").asDouble())
+                    BigDecimal.valueOf(root.path("daily").get(dnumber).path("clouds").asDouble()),
+                    root.path("daily").get(dnumber).path("weather").get(0).path("main").asText()
             );
 
         } catch (JsonProcessingException e) {

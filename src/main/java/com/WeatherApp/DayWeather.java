@@ -10,14 +10,16 @@ public class DayWeather {
     private int temperature;
     private String description;
     private BigDecimal cloudPer;
+    private String mainDesc;
 
-    public DayWeather(int morningTemp, int middayTemp, int eveningTemp, int temperature, String description, BigDecimal cloudPer) {
+    public DayWeather(int morningTemp, int middayTemp, int eveningTemp, int temperature, String description, BigDecimal cloudPer, String mainDesc) {
         this.morningTemp = morningTemp;
         this.middayTemp = middayTemp;
         this.eveningTemp = eveningTemp;
         this.temperature = temperature;
         this.description = description;
         this.cloudPer = cloudPer;
+        this.mainDesc = mainDesc;
     }
 
     public int getMorningTemp() {
@@ -66,5 +68,13 @@ public class DayWeather {
 
     public void setCloudPer(BigDecimal cloudPer) {
         this.cloudPer = cloudPer;
+    }
+
+    public String getMainDesc() {
+        return mainDesc;
+    }
+
+    public void setMainDesc(String mainDesc) {
+        this.mainDesc = mainDesc;
     }
 }
