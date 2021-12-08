@@ -18,7 +18,7 @@ Strona startowa, umożliwiająca wyszukanie pogody w wybranym mieście.
 
 Strona pokazująca pogodę na 8 najbliższych dni w wyszukanym mieście.
 
-![Example screenshot](./img/serchpa.err.jpg)
+![Example screenshot](./img/serchpa.jpg)
 
 Ekran dostarczający nam szczegółowe informacje na temat pogody danego dnia.
 
